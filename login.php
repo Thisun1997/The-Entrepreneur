@@ -12,7 +12,7 @@
 	
 	<form method="post" action="login.php">
 		<div class="input-group">
-			<label>username</label>
+			<label>username</labnbnnbmbnel>
 			<input type="text" name="username">
 		</div>
 		
