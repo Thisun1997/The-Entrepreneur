@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <title>The Entrepreneur</title>
+        <link rel="stylesheet" type="text/css" href="webstyle.css">
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js">
+        </script>
+    </head>
+    <body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #FFF;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="logo">
+                <img src="best.png">
+            </div>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">ABOUT US</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CATEGORIES</a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Art & Humanities</a>
+                    <a class="dropdown-item" href="#">Bussiness & Manegement</a>
+                    <a class="dropdown-item" href="#">Accounting</a>
+                    <a class="dropdown-item" href="#">Design & Fashion</a>
+                    <a class="dropdown-item" href="#">Engineering</a>
+                    <a class="dropdown-item" href="#">IT</a>
+                    <a class="dropdown-item" href="#">Marketing & Sales</a>
+                    <a class="dropdown-item" href="#">Medicine</a>
+                    <a class="dropdown-item" href="#">Technical</a>
+                    <a class="dropdown-item" href="#">Others</a>
+
+                </div>
+
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="openNav();
+                  "> REGISTER</a>
+                </li>
+              </ul>
+            </div>          
+    </section>
+<div id="slider">
+      <div id="headerslider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#headerslider" data-slide-to="0" class="active"></li>
+            <li data-target="#headerslider" data-slide-to="1"></li>
+            <li data-target="#headerslider" data-slide-to="2"></li>
+        </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="5000">
+        <img src="111.jpg" class="d-block img-fluid w-100 h-80">
+            <div class="carousel-caption">
+                <h5>The Ntrepreneur</h5>
+            </div>
+        </div>
+    <div class="carousel-item" data-interval="5000">
+      <img src="en3.jpg" class="d-block img-fluid w-100 h-80">
+      <div class="carousel-caption">
+                <h5>Find Your Value In Here</h5>
+            </div>
+    </div>
+    <div class="carousel-item" data-interval="5000">
+      <img src="en2.jpg" class="d-block img-fluid w-100 h-80">
+        <div class="carousel-caption">
+                <h5>Looking for Investors?</h5>
+            </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#headerslider" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#headerslider" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>  
+</div>
+</section>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" aria-label="Close" onclick="closeNav()">&times;</a>
+  
+  <form>
+  <div class="head-group">
+      <label for="exampleregister">REGISTER HERE</label>
+  </div>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name">
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+    <label class="form-check-label" for="exampleRadios1">
+        Join as a Inventor
+  </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+    <label class="form-check-label" for="exampleRadios2">
+        Join as a Facilitator
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "400px";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+} 
+</script>
+</body>
+</html>
