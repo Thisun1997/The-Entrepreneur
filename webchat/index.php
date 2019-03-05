@@ -12,7 +12,7 @@
         <form action="login.php" | method ="post"> 
             
         <label><b>Username:</b></label>     
-        <input type="text" name="pass" placeholder="username"><br><br>
+        <input type="text" name="uname" placeholder="username"><br><br>
             
         <label><b>Password:</b></label>     
         <input type="text" name="pass" placeholder="Password"><br><br>
