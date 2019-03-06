@@ -5,10 +5,11 @@
     <link rel = "stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    
 <div id="main">
     <div id="info">
         
-        <h2>login here</h2>
+        <h2>Login here</h2>
         <form action="login.php" | method ="post"> 
             
         <label><b>Username:</b></label>     
@@ -25,7 +26,7 @@
         
         
         <form action="signup.php" method="post">
-        <h2>don't have an account sign up here</h2>
+        <h2>Don't have an account sign up here</h2>
             
         <label>Username:</label>
         <input type="text" name="uname" placeholder="Username"><br>

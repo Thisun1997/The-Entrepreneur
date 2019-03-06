@@ -1,5 +1,6 @@
 #main{
     height: 443px;
+
     background-color: white;
     margin-top: 70px;
 }
@@ -8,6 +9,7 @@
     background-color: white;
     box-shadow: 0px 1px 1px #000;
     height: 250px;
+
     margin-bottom: 20px;
     overflow: scroll;
 }
@@ -27,5 +29,6 @@ textarea{
     width: 350px;
 }
 body{
-    background-color:#dc143c;
+    
+    background: #f9f7e8 url(img.jpg) repeat-x top center ;
 }

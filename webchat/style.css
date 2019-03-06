@@ -1,16 +1,22 @@
 body{
+     background: #f9f7e8 url(img.jpg) repeat-x top center ;
     
-    background-color: #dc143c;
     
 }
 
 #main{
+    background: #f9f7e8 url(image2.jpg) repeat-x top center ;
     
-    height: 450px;
+    height: 400px;
+    width: 450px;
     background-color: white;
     margin-top: 100px;
     border-radius: 20px;
 } 
+#login{
+    text-align: center;
+    font-size: 40px;
+}
 
 #info{
     margin-left: 20px;
