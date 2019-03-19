@@ -23,11 +23,15 @@ include 'dbh.php';
     
     if($result->num_rows >0){
         while($row = $result->fetch_assoc()){
-            echo "" .$row["name"]. " " ."::" .$row["msg"]." --" .$row["data"]. "<br>";
+            //echo $_SESSION['name'];
+            //echo "" .$row["name"];
+         //   if($_SESSION['name'] == "" .$row["name"]){   set other user profile name
+            echo "" .$row["name"]. " " .": " .$row["msg"]. "<br>"; //." --" .$row["data"]
             echo "<br>";
+           // }
         }
     }else{
-        echo "0 results";
+        echo "Start your convesation";
     }
     $conn->close();
     ?>
