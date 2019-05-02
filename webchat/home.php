@@ -1,5 +1,10 @@
 <?php
 session_start();
+if(!isset($_SESSION['name'])){
+    
+    header('Location: login.php');
+    
+}
 include 'dbh.php';
 ?>
 
@@ -17,7 +22,7 @@ include 'dbh.php';
 <h1 style ="background-color: #6495ed; color : white;"><?php echo 
     $_SESSION['name']?>-online</h1>
     
-    <div class="output">
+    <div class="output" id="output">
         <?php $sql = "SELECT * FROM posts";
     $result = $conn->query($sql);
     
@@ -40,7 +45,7 @@ include 'dbh.php';
     
     
     
-<form method="post" action="send.php">
+<form method="post" action="send.php" id="pst">
     
 <textarea name="msg" placeholder= "Type to send message...." 
 class="form-control"></textarea><br>
@@ -54,6 +59,26 @@ class="form-control"></textarea><br>
 </form>
     
 </div> 
+    
+<script type="text/javascript">
+    function loadMessages(){
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'update.php);
+        xhr.onload = function(){
+            if (xhr.status === 200){
+                document.getElementById('output').innerHTML = xhr.responseText;
+            }else{
+                document.getElementById('output').innerHTML = xhr.status;
+            }
+        };
+        xhr.send();
+    }
+    window.setInterval(loadMessages, 1000);
+    
+    
+    
+    
+</script>
 </body>
 
  
