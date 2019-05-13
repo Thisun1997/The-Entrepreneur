@@ -1,0 +1,44 @@
+<?php
+session_start();
+
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+<div id="main">
+    
+<h1 style ="background-color: #6495ed; color : white; font-family: Poppins-Medium;"><?php echo $_SESSION['name']?>-online</h1>
+    
+    <div class="output">
+    
+        
+        
+    </div>
+    
+    
+    
+<form method="post" action="send.php">
+<textarea rows="3" cols="10" name="msg" placeholder= "Type to send message...." 
+class="form-control"></textarea><br>
+    <input id="SD" type="submit" value="Send">
+</form>
+<br><br>
+<form action="logout.php">
+
+<input class="logout1" style="width:80% !important; background-color: #6495ed; color : white; font-size: 20px;" type="submit" value="Logout">
+    
+</form>
+    
+</div> 
+</body>
+
+ 
+</html>

@@ -1,0 +1,32 @@
+body{
+     background: #f9f7e8 url(img.jpg) repeat-x top center ;
+    
+    
+}
+
+#main{
+    background: #f9f7e8 url(image2.jpg) repeat-x top center ;
+    
+    height: 400px;
+    width: 450px;
+    background-color: white;
+    margin-top: 100px;
+    border-radius: 20px;
+} 
+#login{
+    text-align: center;
+    font-size: 40px;
+}
+
+#info{
+    margin-left: 20px;
+    padding-top: 2px;
+    
+}
+input[type=txt]{
+    width: : 260px;
+    box-sizing: border-box;
+    border: : 2px solid #dc143c;
+    border-radius: 4px;
+    
+}
