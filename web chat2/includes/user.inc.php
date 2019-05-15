@@ -7,6 +7,7 @@ class User extends Dbh{
         $sql = "SELECT * FROM signup"; //table name
         $result = $this->connect()->query($sql);
         $numRows = $result->num_rows;
+        
         if ($numRows>0){
             #code..
             while($row = $result->fetch_assoc()){
@@ -22,8 +23,7 @@ class User extends Dbh{
 
         if(!empty($_POST['msg'])){
             $sql="insert into posts(msg,name) values ('$msg','$name')";
-            $result=$this->connect()->query($sql);
-            
+            $result=$this->connect()->query($sql); 
         }
         header("Location:home.php");
     }
@@ -42,6 +42,7 @@ class User extends Dbh{
             $_SESSION['name']=$_POST['uname'];
             header("Location:Home.php") ;  
         }
+        
     }
     
     

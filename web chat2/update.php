@@ -3,7 +3,7 @@ session_start();
 include 'includes/dbh.inc.php';
 include 'includes/user.inc.php';
 include 'includes/viewuser.inc.php';
-$ob= new ViewUser();
+$ob= new Dbh();
 $conn=$ob->connect();
 
 $sql = "SELECT * FROM posts";

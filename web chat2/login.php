@@ -8,6 +8,4 @@ $conn=$User->connect();
 
 $result=$User->checkUser();
 
-
-
 ?>
