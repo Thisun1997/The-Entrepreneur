@@ -11,6 +11,7 @@ if(input::exists()){
 
         ));
         if($Validation->passed()) {
+            $_SESSION['last_time'] = time();
             $inventor=new Inventor();
             $facilitator=new Facilitator();
             $loginInv = $inventor->login(Input::get('emaillog'),Input::get('password'));

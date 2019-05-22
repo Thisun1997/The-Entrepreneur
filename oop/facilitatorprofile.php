@@ -1,6 +1,27 @@
 <?php 
 	require_once 'core/init.php';
     $user = new Facilitator();
+    if((time()-$_SESSION['last_time'])>60):
+      $user->logout();
+      Redirect::to('index.php');
+      Session::flash('success','<div class="alert alert-danger">
+                    Sorry!. Session timeout. please log in and try again.
+                  </div>');
+    else:
+      $_SESSION['last_time'] = time();
+      if(isset($_POST["edit"])){
+        Redirect::to("facilitatoredit.php");
+      }
+      elseif(isset($_POST["changepass"])){
+        Redirect::to("changepassword.php");
+      }
+      elseif(isset($_POST["viewpost"])){
+        Redirect::to("#");
+      }
+      elseif(isset($_POST["delete"])){
+        Redirect::to("delete.php");
+      }
+      
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,11 +95,13 @@
       </div>
       <div class="col-md-8">
         <div class="row">
-            <a href="facilitatoredit.php" ><button id="update"><i class="fas fa-user-edit"></i>  Edit account</button></a>
-            <a href="changepassword.php" ><button id="update"><i class="fas fa-user-password"></i>  Edit password</button></a>
-            <A href="#"><button name="comment"><i class="fas fa-eye"></i>  View posts</button></A>
-            <button name="logout" id="btn-confirm"><i class="fas fa-sign-out-alt"></i> logout</button>
-            <a href="delete.php"><button name="delete"><i class="fas fa-user-slash"></i>  Delete account</button></a>
+        <form method="post">
+            <button type="submit" name="edit"><i class="fas fa-user-edit"></i>  Edit account</button>
+            <button type="submit" name="changepass"><i class="fas fa-user-password"></i>  Edit password</button>
+            <button type="submit" name="postview"><i class="fas fa-eye"></i>  View posts</button>
+            <button type="submit" name="delete"><i class="fas fa-user-slash"></i>  Delete account</button></form>
+        </form>
+            <button name="logout" id="btn-confirm" style="margin-top:10px"><i class="fas fa-sign-out-alt"></i> logout</button>
       </div>
         <div class="row">
           <div class="container tabs">
@@ -143,3 +166,5 @@ modalConfirm(function(confirm){
 
 </body>
 </html>
+
+<?php endif ?>

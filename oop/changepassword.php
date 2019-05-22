@@ -3,6 +3,13 @@ require_once('core/init.php');
 $inventor = new Inventor();
 $facilitator = new Facilitator();
 if (($facilitator->isLoggedIn()) || ($inventor->isLoggedIn())) : 
+  if((time()-$_SESSION['last_time'])>60){
+    $inventor->logout();
+    Session::flash('success','<div class="alert alert-danger">
+                    Sorry!. Session timeout, password changed unsuccessfull. please log in and try again.
+                  </div>');
+    Redirect::to('index.php');}
+  else{
 if (($facilitator->isLoggedIn())){ 
     if(Input::exists()){
         if(Token::check(Token::generate())){
@@ -50,7 +57,7 @@ else{
                     die($e->getMessage());
                 }}}
             }
-        }
+        }}
 
        
 ?>

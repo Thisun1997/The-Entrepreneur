@@ -3,8 +3,13 @@ ob_start();
 require_once('core/init.php');
 $user = new Facilitator();
 if ($user->isLoggedIn()) : 
-    
-
+  if((time()-$_SESSION['last_time'])>60){
+    $user->logout();
+    Session::flash('success','<div class="alert alert-danger">
+                    Sorry!. Session timeout, profile update was unsuccessfull. please log in and try again.
+                  </div>');
+    Redirect::to('index.php');}
+  else{
 if(Input::exists()){
         if(Token::check(Token::generate())){
             $categoryarray = Input::get('category');
@@ -23,7 +28,7 @@ if(Input::exists()){
             }catch(Exception $e){
                 die($e->getMessage());
             }
-            }}
+            }}}
 ?>
 
 <html>

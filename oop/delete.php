@@ -4,6 +4,13 @@ require_once('core/init.php');
 $faci = new Facilitator();
 $inv = new Inventor();
 if ($faci->isLoggedIn() || $inv->isLoggedIn()) :
+  if((time()-$_SESSION['last_time'])>60){
+    $inv->logout();
+    Session::flash('success','<div class="alert alert-danger">
+                    Sorry!. Session timeout, account deletion unsuccessfull. please log in and try again.
+                  </div>');
+    Redirect::to('index.php');}
+  else{
   if ($faci->isLoggedIn()){
     if(isset($_POST['yes'])){ 
       if(Input::exists()){
@@ -31,7 +38,7 @@ if ($faci->isLoggedIn() || $inv->isLoggedIn()) :
           }
       }
     }
-  }
+  }}
   
     
 
