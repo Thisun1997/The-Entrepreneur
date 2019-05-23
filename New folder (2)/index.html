@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>post-form</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div></div>
+    <div class="modal fade" role="dialog" tabindex="-1" style="height: 600px;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add a new post</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body" style="width: 498px;">
+                    <div class="d-inline-flex">
+                        <p class="text-center" style="width: 100px;height: 36px;">Category</p>
+                        <div class="dropdown"><button class="btn btn-light btn-block dropdown-toggle text-left text-primary d-inline" data-toggle="dropdown" aria-expanded="false" type="button" style="height: 36px;">Dropdown </button>
+                            <div class="dropdown-menu dropdown-menu-right"
+                                role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                        </div>
+                    </div>
+                    <div>
+                        <form><textarea class="form-control" rows="8" cols="60" name="postbody" style="height: 150px;"></textarea>
+                            <div style="margin-top: 10px;">
+                                <p><strong>You have to upload photos</strong></p><input type="file" style="width: 200px;"><input type="file" style="width: 200px;"><input type="file" style="width: 200px;"></div>
+                            <div style="margin-top: 10px;">
+                                <p><strong>You have to upload a product video link</strong></p><input class="form-control" type="url"></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Post</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
