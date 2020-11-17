@@ -14,7 +14,6 @@
 	<form method="post" action="register.php">
 		<?php include('errors.php'); ?>
 
-		
 		<div class="input-group">
 			<label>first name</label>
 			<input type="text" name="firstname" value="<?php echo $firstname; ?>">
@@ -34,6 +33,7 @@
 			<label>password</label>
 			<input type="password" name="password_1">
 		</div>
+	
 		
 		<div class="input-group">
 			<label>confirm password</label>

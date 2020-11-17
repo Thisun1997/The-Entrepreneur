@@ -1,3 +1,4 @@
+<?php include('sever.php'); ?>
 <!DOCTYPE = html>
 <html>
 <head>
@@ -11,18 +12,19 @@
 	</div>
 	
 	<form method="post" action="login.php">
+		<?php include('errors.php'); ?>
 		<div class="input-group">
-			<label>username</label>
-			<input type="text" name="username">
+			<label>email</label>
+			<input type="text" name="email">
 		</div>
 		
 		<div class="input-group">
 			<label>password</label>
-			<input type="password" name="password_1">
+			<input type="password" name="password">
 		</div>
 		
 		<div class="input-group">
-			<button type="submit" name="register" class="btn">log in</button>
+			<button type="submit" name="login" class="btn">log in</button>
 		</div>
 
 		<p>

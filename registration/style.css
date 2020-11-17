@@ -40,6 +40,10 @@ form{
 	margin: 3px;
 }
 
+.progress-bar {
+    color: #333;
+} 
+
 .input-group input{
 	height: 30px;
 	width: 93%;
@@ -68,3 +72,4 @@ form{
 	border-radius: 5px;
 	text-align: left;
 }
+
